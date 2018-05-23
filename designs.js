@@ -8,12 +8,19 @@ function setDimensions() {
 }
 
 function makeGrid(height,width) {
+    
     for (i = 0; i < height; i++) {
       let newRow = document.createElement('tr');
       canvas.appendChild(newRow);
     for (j = 0; j < width; j++) {
-      let newCell = document.createElement('td');
-      newRow.appendChild(newCell).setAttribute("class","cells");
+        let newCell = document.createElement('td');
+        var color = function changeColor() {
+        let pickedColor = document.getElementById('colorPicker').value;
+        newCell.style.backgroundColor= pickedColor;
+        }
+        
+        newRow.appendChild(newCell).addEventListener('click',color);
+        
         }
     }
 }

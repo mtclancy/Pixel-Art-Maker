@@ -39,3 +39,6 @@ input[type="number"] {
   width: 6em;
 }
 
+.changed {
+    background-color: black;
+}
